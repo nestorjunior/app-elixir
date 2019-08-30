@@ -5,11 +5,16 @@ defmodule AppElixir.CLI.Main do
         Shell.cmd("clear")
         welcome_message()
         Shell.prompt("Enter to continue...")
+        starts_menu_choice()
     end
 
     defp welcome_message do
         Shell.info("---- App Elixir ---")
         Shell.info("App Elixir")
         Shell.info("-------------------")
+    end
+
+    defp starts_menu_choice do
+        AppElixir.CLI.MenuChoice.start
     end
 end
