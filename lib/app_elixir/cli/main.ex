@@ -15,6 +15,6 @@ defmodule AppElixir.CLI.Main do
     end
 
     defp starts_menu_choice do
-        AppElixir.CLI.MenuChoice.start
+        AppElixir.CLI.Menu.Choice.start
     end
 end

@@ -1,14 +1,12 @@
-defmodule AppElixir.CLI.MenuChoice do
+defmodule AppElixir.CLI.Menu.Choice do
     alias Mix.Shell.IO, as: Shell
-    alias AppElixir.CLI.MenuItems
+    alias AppElixir.CLI.Menu.Items
 
     def start do
         Shell.cmd("clear")
         Shell.info("Choose an option: ")
-        
-        menu_items = MenuItems.all()
+        menu_items = Items.all()
         find_menu_item_by_index = &Enum.at(menu_items, &1, :error)
-
         menu_items
         |> Enum.map(&(&1.label))
         |> display_options()

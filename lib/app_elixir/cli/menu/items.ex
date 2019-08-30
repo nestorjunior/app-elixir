@@ -1,4 +1,4 @@
-defmodule AppElixir.CLI.MenuItems do
+defmodule AppElixir.CLI.Menu.Items do
     alias AppElixir.CLI.Menu
     
     def all, do: [
