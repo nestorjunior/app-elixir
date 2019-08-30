@@ -9,9 +9,9 @@ defmodule AppElixir.CLI.Main do
     end
 
     defp welcome_message do
-        Shell.info("---- App Elixir ---")
-        Shell.info("App Elixir")
-        Shell.info("-------------------")
+        Shell.info("--------------------")
+        Shell.info("---- App Elixir ----")
+        Shell.info("--------------------")
     end
 
     defp starts_menu_choice do
