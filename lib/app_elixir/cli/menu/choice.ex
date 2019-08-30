@@ -1,6 +1,7 @@
 defmodule AppElixir.CLI.Menu.Choice do
     alias Mix.Shell.IO, as: Shell
     alias AppElixir.CLI.Menu.Items
+    alias AppElixir.DB.CSV
 
     def start do
         Shell.cmd("clear")
@@ -15,6 +16,7 @@ defmodule AppElixir.CLI.Menu.Choice do
         |> parse_answer()
         |> find_menu_item_by_index.()
         |> confirm_menu_item()
+        |> CSV.perform
     end
 
     defp display_options(n) do
@@ -48,7 +50,7 @@ defmodule AppElixir.CLI.Menu.Choice do
         Shell.info("Your choice:  [#{chosen_menu_item.label}]")
 
         if Shell.yes?("Ok?") do
-            Shell.info("... #{chosen_menu_item.label} ...")
+            chosen_menu_item
         else 
             start()
         end
