@@ -3,11 +3,11 @@ defmodule AppElixir.CLI.Main do
     
     def start_app do
         Shell.cmd("clear")
-        welcome_message
+        welcome_message()
         Shell.prompt("Enter to continue...")
     end
 
-    def welcome_message do
+    defp welcome_message do
         Shell.info("---- App Elixir ---")
         Shell.info("App Elixir")
         Shell.info("-------------------")
