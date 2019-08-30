@@ -1,8 +1,8 @@
 defmodule Mix.Tasks.Start do
-    use Mix.Task
+  use Mix.Task
 
-    @shortdoc "Start [App]"
-    def run(_) do
-        IO.puts('Init aplication!!!')
-    end
+  @shortdoc "Start [App]"
+  def run(_) do
+    AppElixir.CLI.Main.start_app()
+  end
 end
