@@ -1,6 +1,6 @@
 # AppElixir
 
-**TODO: Add description**
+**App: Elixir Project**
 
 ## Installation
 
